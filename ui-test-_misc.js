@@ -15,6 +15,10 @@ describe('ROCOForum_Misc', function () {
 		it('sets category', function () {
 			browser.assert.attribute(ROCOForumList, 'category', ROCOForumTopic);
 		});
+
+		it('sets per-page', function () {
+			browser.assert.attribute(ROCOForumList, 'per-page', '10');
+		});
 		
 	});
 
