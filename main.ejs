@@ -1,4 +1,7 @@
 <div class="ROCOForum">
-	<script src="https://cafe.rosano.ca/javascripts/embed-topics.js"></script>
+	<% if (!OLSK_SPEC_UI()) { -%>
+		<script src="https://cafe.rosano.ca/javascripts/embed-topics.js"></script>
+	<% } -%>
+	
 	<d-topics-list class="ROCOForumList" discourse-url="https://cafe.rosano.ca" category="<%= ROCOForumTopic %>"></d-topics-list>
 </div>
