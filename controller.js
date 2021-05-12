@@ -10,6 +10,7 @@ const mod = {
 						ROCOForumTopic: Math.random().toString(),
 					}, Object.fromEntries((new URLSearchParams(req.query)).entries())));
 			},
+			OLSKRouteLanguageCodes: ['en', 'fr', 'es', 'pt'],
 		}];
 	},
 

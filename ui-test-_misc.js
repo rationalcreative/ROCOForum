@@ -22,4 +22,16 @@ describe('ROCOForum_Misc', function () {
 		
 	});
 
+	describe('ROCOForumButton', function test_ROCOForumButton () {
+
+		it('classes OLSKDecorPressCall', function () {
+			browser.assert.hasClass(ROCOForumButton, 'OLSKDecorPressCall');
+		});
+
+		it('sets href', function () {
+			browser.assert.attribute(ROCOForumButton, 'href', 'https://cafe.rosano.ca/c/' + ROCOForumTopic);
+		});
+
+	});
+
 });
