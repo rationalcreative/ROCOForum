@@ -3,6 +3,8 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 Object.entries({
 	ROCOForum: '.ROCOForum',
 
+	ROCOForumNoscriptList: 'noscript .ROCOForumNoscriptList',
+
 	ROCOForumList: '.ROCOForumList',
 
 	ROCOForumButton: '.ROCOForumButton',
@@ -18,6 +20,10 @@ describe('ROCOForum_Access', function () {
 
 	it('shows ROCOForum', function () {
 		browser.assert.elements(ROCOForum, 1);
+	});
+
+	it.skip('shows ROCOForumNoscriptList', function () {
+		browser.assert.elements(ROCOForumNoscriptList, 1);
 	});
 
 	it('shows ROCOForumList', function () {

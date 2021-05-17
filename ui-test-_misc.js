@@ -10,6 +10,18 @@ describe('ROCOForum_Misc', function () {
 		});
 	});
 
+	describe.skip('ROCOForumNoscriptList', function test_ROCOForumNoscriptList () {
+
+		it('sets src', function () {
+			browser.assert.attribute(ROCOForumNoscriptList, 'src', `https://cafe.rosano.ca/embed/topics?category=${ ROCOForumTopic }&per_page=10`);
+		});
+
+		it('sets frameborder', function () {
+			browser.assert.attribute(ROCOForumNoscriptList, 'frameborder', '0');
+		});
+		
+	});
+
 	describe('ROCOForumList', function test_ROCOForumList () {
 
 		it('sets category', function () {
