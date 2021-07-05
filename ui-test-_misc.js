@@ -10,6 +10,14 @@ describe('ROCOForum_Misc', function () {
 		});
 	});
 
+	describe('ROCOForum', function test_ROCOForum () {
+
+		it('classes OLSKDecorModule', function () {
+			browser.assert.hasClass(ROCOForum, 'OLSKDecorModule');
+		});
+		
+	});
+
 	describe.skip('ROCOForumNoscriptList', function test_ROCOForumNoscriptList () {
 
 		it('sets src', function () {
