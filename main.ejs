@@ -1,18 +1,21 @@
+<% if (!locals.ROCOForumDomain) {
+	locals.ROCOForumDomain = 'cafe.rosano.ca';
+} -%>
 <div class="ROCOForum OLSKDecorModule">
 
 	<h2 class="ROCOForumHeading"><%= OLSKLocalized('ROCOForumHeadingText') %></h2>
 
 	<noscript>
-		<iframe class="ROCOForumNoscriptList" src="https://cafe.rosano.ca/embed/topics?category=<%= ROCOForumTopic %>&amp;per_page=10" frameborder="0"></iframe>
+		<iframe class="ROCOForumNoscriptList" src="https://<%= locals.ROCOForumDomain %>/embed/topics?category=<%= ROCOForumTopic %>&amp;per_page=10" frameborder="0"></iframe>
 	</noscript>
 
 	<% if (!OLSK_SPEC_UI()) { -%>
-		<script src="https://cafe.rosano.ca/javascripts/embed-topics.js"></script>
+		<script src="https://<%= locals.ROCOForumDomain %>/javascripts/embed-topics.js"></script>
 	<% } -%>
 	
-	<d-topics-list class="ROCOForumList" discourse-url="https://cafe.rosano.ca" category="<%= ROCOForumTopic %>" per-page="10"></d-topics-list>
+	<d-topics-list class="ROCOForumList" discourse-url="https://<%= locals.ROCOForumDomain %>" category="<%= ROCOForumTopic %>" per-page="10"></d-topics-list>
 
 	<p>
-		<a class="ROCOForumButton OLSKDecorPress OLSKDecorPressCall" href="https://cafe.rosano.ca/c/<%= ROCOForumTopic %>"><%= OLSKLocalized('ROCOForumButtonText') %></a>
+		<a class="ROCOForumButton OLSKDecorPress OLSKDecorPressCall" href="https://<%= locals.ROCOForumDomain %>/c/<%= ROCOForumTopic %>"><%= OLSKLocalized('ROCOForumButtonText') %></a>
 	</p>
 </div>

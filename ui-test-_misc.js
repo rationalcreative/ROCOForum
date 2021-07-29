@@ -2,10 +2,12 @@ const kDefaultRoute = require('./controller.js').OLSKControllerRoutes().shift();
 
 describe('ROCOForum_Misc', function () {
 
+	const ROCOForumDomain = uRandomElement(undefined, Math.random().toString());
 	const ROCOForumTopic = Math.random().toString();
 
 	before(function() {
 		return browser.OLSKVisit(kDefaultRoute, {
+			ROCOForumDomain,
 			ROCOForumTopic,
 		});
 	});
@@ -21,7 +23,7 @@ describe('ROCOForum_Misc', function () {
 	describe.skip('ROCOForumNoscriptList', function test_ROCOForumNoscriptList () {
 
 		it('sets src', function () {
-			browser.assert.attribute(ROCOForumNoscriptList, 'src', `https://cafe.rosano.ca/embed/topics?category=${ ROCOForumTopic }&per_page=10`);
+			browser.assert.attribute(ROCOForumNoscriptList, 'src', `https://${ ROCOForumDomain || 'cafe.rosano.ca' }/embed/topics?category=${ ROCOForumTopic }&per_page=10`);
 		});
 
 		it('sets frameborder', function () {
@@ -49,7 +51,7 @@ describe('ROCOForum_Misc', function () {
 		});
 
 		it('sets href', function () {
-			browser.assert.attribute(ROCOForumButton, 'href', 'https://cafe.rosano.ca/c/' + ROCOForumTopic);
+			browser.assert.attribute(ROCOForumButton, 'href', `https://${ ROCOForumDomain || 'cafe.rosano.ca' }/c/` + ROCOForumTopic);
 		});
 
 	});
