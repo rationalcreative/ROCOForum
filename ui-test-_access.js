@@ -21,23 +21,23 @@ describe('ROCOForum_Access', function () {
 	});
 
 	it('shows ROCOForum', function () {
-		browser.assert.elements(ROCOForum, 1);
+		return browser.assert.elements(ROCOForum, 1);
 	});
 
 	it('shows ROCOForumHeading', function () {
-		browser.assert.elements(ROCOForumHeading, 1);
+		return browser.assert.elements(ROCOForumHeading, 1);
 	});
 
 	it.skip('shows ROCOForumNoscriptList', function () {
-		browser.assert.elements(ROCOForumNoscriptList, 1);
+		return browser.assert.elements(ROCOForumNoscriptList, 1);
 	});
 
 	it('shows ROCOForumList', function () {
-		browser.assert.elements(ROCOForumList, 1);
+		return browser.assert.elements(ROCOForumList, 1);
 	});
 
 	it('shows ROCOForumButton', function () {
-		browser.assert.elements(ROCOForumButton, 1);
+		return browser.assert.elements(ROCOForumButton, 1);
 	});
 
 });

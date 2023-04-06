@@ -15,11 +15,11 @@ kDefaultRoute.OLSKRouteLanguageCodes.forEach(function (OLSKRoutingLanguage) {
 		});
 
 		it('localizes ROCOForumHeading', function () {
-			browser.assert.text(ROCOForumHeading, uLocalized('ROCOForumHeadingText'));
+			return browser.assert.text(ROCOForumHeading, uLocalized('ROCOForumHeadingText'));
 		});
 
 		it('localizes ROCOForumButton', function() {
-			browser.assert.text(ROCOForumButton, uLocalized('ROCOForumButtonText'));
+			return browser.assert.text(ROCOForumButton, uLocalized('ROCOForumButtonText'));
 		});
 
 	});
